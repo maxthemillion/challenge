@@ -1,0 +1,15 @@
+name: challenge
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - altair
+  - pandas
+  - jupyterlab
+  - pytest
+  - seaborn
+  - rich
+  - black
+  - flake8
+  - pip:
+    - pre-commit
