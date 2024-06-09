@@ -5,6 +5,7 @@ import altair as alt
 
 def generate_facet_plot_histogram(data, x, row, height, aspect):
     """Generates a faceted histogram plot with seaborn"""
+
     g = sns.FacetGrid(data, row=row, height=height, aspect=aspect)
     g.map_dataframe(sns.histplot, x=x, binwidth=1)
     g.tick_params(axis="x", rotation=45)
@@ -14,6 +15,7 @@ def generate_facet_plot_histogram(data, x, row, height, aspect):
 
 def generate_facet_plot_line(data, x, y, hue, row, height, aspect):
     """Generates a faceted line plot with seaborn"""
+
     g = sns.FacetGrid(data, row=row, height=height, aspect=aspect)
     g.map_dataframe(sns.lineplot, x=x, y=y, hue=hue)
     g.tick_params(axis="x", rotation=45)
@@ -23,6 +25,7 @@ def generate_facet_plot_line(data, x, y, hue, row, height, aspect):
 
 def generate_weekly_line_plot(data):
     """Generates a faceted, interactive line chart using altair plotting library."""
+
     selection = alt.selection_point(encodings=["color"])
     color = alt.condition(
         selection,
@@ -59,6 +62,7 @@ def generate_weekly_line_plot(data):
 
 def resample_to_hours(data):
     """Groups the time series by properties week and property_name and resamples it to hourly resolution."""
+
     return (
         data.loc[:, ["week", "weekly_ts", "property_name", "temperature"]]
         .copy()
@@ -72,6 +76,7 @@ def resample_to_hours(data):
 
 def normalize_to_start_of_week(data):
     """Adds an additional column to the dataframe that contains a time series which has year and month set to Jan 1999. The day corresponds to the weekday (0-6) of the original timestamp. The time is kept as is."""
+
     data["weekly_ts"] = pd.to_datetime(
         "1999-01-0"
         + (data.datetime.dt.weekday + 1).astype(str)
@@ -83,5 +88,6 @@ def normalize_to_start_of_week(data):
 
 def extract_week_number(data):
     """Adds week number of the original timeseries to the dataframe as additional column"""
+
     data["week"] = data.datetime.dt.isocalendar().week.astype(str)
     return data
