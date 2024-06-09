@@ -3,7 +3,7 @@ I picked challenge #1 (handling gaps in time series data) as I worked with time 
 
 ## Approach
 
-I spent most of the time trying to understand the structure and shape of the data. Results of that process are documented in `./src/challenge.ipynb`. An interactive version of that notebook is hosted at https://github.com/maxthemillion/challenge. I recommend to use the latter as the preview in github does not render all charts correctly. The most important findings and further steps that could be taken are summarized below.
+I spent most of the time trying to understand the structure and shape of the data. Results of that process are documented in `./src/challenge.ipynb`. An interactive version of that notebook is hosted at https://maxthemillion.github.io/challenge/. I recommend to use the latter as the preview in github does not render all charts correctly. The most important findings and further steps that could be taken are summarized below.
 
 ### Assumptions/Findings:
 * Data originates from manually controlled production process
