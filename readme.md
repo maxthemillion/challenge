@@ -3,7 +3,7 @@ I picked challenge #1 (handling gaps in time series data) as I worked with time 
 
 ## Approach
 
-I spent most of the time trying to understand the structure and shape of the data. Results of that process are documented in `./src/challenge.ipynb`. The most important findings are summarized below
+I spent most of the time trying to understand the structure and shape of the data. Results of that process are documented in `./src/challenge.ipynb`. An interactive version of that notebook is hosted at https://github.com/maxthemillion/challenge. I recommend to use the latter as the preview in github does not render all charts correctly. The most important findings and further steps that could be taken are summarized below.
 
 ### Assumptions/Findings:
 * Data originates from manually controlled production process
@@ -19,7 +19,7 @@ In a real life scenario we may want to be able to check data in real time and pr
 ### What is required to set up such an alerting system:
 
 1. **Algorithm that classifies data as normal/abnormal:** We'd require a system that does the classification of normal/abnormal data points for us. We have multiple options at hand including quite complex ones that use classification or prediction approaches, I outline a simple one below.
-1. **Production-ready code:** The notebook provided only shows how I would do an exploratory analysis when confronted with data for the first time. I would go from here and write standard Python code which can be used to be run in a productive environment and which is also tested and quality controlled.
+1. **Production-ready code:** The notebook provided only shows how I would do an exploratory analysis when confronted with data for the first time. I would go from here and write standard Python code which can be used to be run in a productive environment and which is also tested with pytest or equivalent libraries.
 
 ### How to create an anomaly detection algorithm?
 
