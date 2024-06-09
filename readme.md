@@ -23,7 +23,7 @@ In a real life scenario we may want to be able to check data in real time and pr
 
 ### How to create an anomaly detection algorithm?
 
-Multiple are available for anomaly detection in this context. I conclude by lining out one simple option that does not require filling gaps in the timeseries other than resampling to hourly frequency and normalizing it to the start of each production process:
+Multiple options are available for anomaly detection in this context. I conclude by lining out one simple option that does not require filling gaps in the timeseries other than resampling to hourly frequency and normalizing it to the start of each production process:
 
 *Statistical Analysis based on normalized daily time series:*
 
